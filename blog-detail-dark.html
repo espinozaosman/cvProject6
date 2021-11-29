@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from bestwebcreator.com/martyn/demo/blog-detail-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Nov 2021 14:21:55 GMT -->
+<head>
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- SITE TITLE -->
+<title>Stefan Rowland</title>
+<!-- Favicon Icon -->
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+<!-- Animation CSS -->
+<link rel="stylesheet" href="assets/css/animate.css">	
+<!-- Latest Bootstrap min CSS -->
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<!-- Icon Font CSS -->
+<link rel="stylesheet" href="assets/css/ionicons.min.css">
+<link rel="stylesheet" href="assets/css/themify-icons.css">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="assets/css/all.min.css">
+<!-- Flaticon Font CSS -->
+<link rel="stylesheet" href="assets/css/flaticon.css">
+<!--- owl carousel CSS-->
+<link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css">
+<link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.min.css">
+<!-- Magnific Popup CSS -->
+<link rel="stylesheet" href="assets/css/magnific-popup.css">
+<!-- Scrollbar Css -->
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+<!-- Style CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+<script>
+var sc_project=11981757; 
+var sc_invisible=1; 
+var sc_security="35d2687e"; 
+var sc_https=1; 
+</script>
+<script src="../../../www.statcounter.com/counter/counter.js" async></script>
+
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div class="preloader">
+    <div class="loader">
+		<div class="loader-inner ball-scale">
+          <div></div>
+          <div></div>
+          <div></div>
+		</div>
+	</div>
+</div>
+<!-- END LOADER --> 
+
+<!-- START HEADER -->
+<header class="header_wrap fixed-top light_skin hover_menu_style3 transparent-header">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg"> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="ion-android-menu"></span> </button>
+      	<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li>
+                    <a class="nav-link page-scroll" href="index-7.html#home_section">Home</a>
+                </li>
+                <li>
+                    <a class="nav-link page-scroll" href="index-7.html#about">About</a>
+                </li>
+                <li>
+                    <a class="nav-link page-scroll" href="index-7.html#services">Services</a>
+                </li>
+                <li>
+                    <a class="nav-link page-scroll" href="index-7.html#portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a class="nav-link page-scroll" href="index-7.html#experience">Experience</a>
+                </li>
+                <li>
+                    <a class="nav-link page-scroll" href="index-7.html#blog">blog</a>
+                </li>
+                <li>
+                    <a class="nav-link page-scroll" href="index-7.html#contact">contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+  </div>
+</header>
+<!-- START HEADER --> 
+
+<!-- START SECTION BLOG -->
+<section class="bg_black2">
+	<div class="container">
+    	<div class="row">
+        	<div class="col-lg-9">
+            	<div class="single_post text_white">
+                    <div class="blog_img">
+                        <a href="#">
+                            <img src="assets/images/photo-1534870439272-475575042b61.webp" alt="blog_img1">
+                        </a>
+                    </div>
+                    <div class="blog_content">
+                        <div class="blog_text">
+                            <h2>How to use React Context effectively</h2>
+                            <ul class="list_none blog_meta">
+                                <li><a href="#"><i class="ion-calendar"></i> October 15th, 2021</a></li>
+                            </ul>
+                            <p>In Application State Management with React, I talk about how using a mix of local state and React Context can help you manage state well in any React application. I showed some examples and I want to call out a few things about those examples and how you can create React context consumers effectively so you avoid some problems and improve the developer experience and maintainability of the context objects you create for your application and/or libraries.</p>
+                            <blockquote>
+                            	<p>Please do read Application State Management with React and follow the advice that you shouldn't be reaching for context to solve every state sharing problem that crosses your desk. But when you do need to reach for context, hopefully this blog post will help you know how to do so effectively. Also, remember that context does NOT have to be global to the whole app, but can be applied to one part of your tree and you can (and probably should) have multiple logically separated contexts in your app.</p>
+                            </blockquote>
+                            <p>First, let's create a file at <code>src/count-context.js</code> and we'll create our context there:</p>
+                            <br>
+                            <div class="blog_img">
+                                    <img src="assets/images/blog-1-1.png" alt="blog_img1">
+                            </div>
+                            <br>
+                            <p>First off, I don't have an initial value for the CountContext. If I wanted an initial value, I would call <code>React.createContext({count: 0})</code>. But I don't include a default value and that's intentional. The defaultValue is only useful in a situation like this:</p>
+                            <br>
+                            <div class="blog_img">
+                                <img src="assets/images/blog-1-2.png" alt="blog_img1">
+                            </div>
+                            <br>
+                            <p>Because we don't have a default value for our CountContext, we'll get an error on the highlighted line where we're destructuring the return value of useContext. This is because our default value is undefined and you cannot destructure undefined.</p>
+                            <p>None of us likes runtime errors, so your knee-jerk reaction may be to add a default value to avoid the runtime error. However, what use would the context be if it didn't have an actual value? If it's just using the default value that's been provided, then it can't really do much good. 99% of the time that you're going to be creating and using context in your application, you want your context consumers (those using useContext) to be rendered within a provider which can provide a useful value.</p>
+                            <blockquote><p>There are situations where default values are useful, but most of the time they're not necessary or useful.</p></blockquote>
+                            <p>The React docs suggest that providing a default value "can be helpful in testing components in isolation without wrapping them." While it's true that it allows you to do this, I disagree that it's better than wrapping your components with the necessary context. Remember that every time you do something in your test that you don't do in your application, you reduce the amount of confidence that test can give you. There are reasons to do this, but that's not one of them.</p>
+                            <blockquote><p>If you're using TypeScript, not providing a default value can be really annoying for people who are using React.useContext, but I'll show you how to avoid that problem altogether below. Keep reading!</p></blockquote>
+                            <br>
+                            <h3>The Custom Provider Component</h3>
+                            <br>
+                            <p>Ok, let's continue. For this context module to be useful at all we need to use the Provider and expose a component that provides a value. Our component will be used like this:</p>
+                            <br>
+                            <div class="blog_img">
+                                <img src="assets/images/blog-1-3.png" alt="blog_img1">
+                            </div>
+                            <br>
+                            <p>So let's make a component that can be used like that:</p>
+                            <br>
+                            <div class="blog_img">
+                                <img src="assets/images/blog-1-4.png" alt="blog_img1">
+                            </div>
+                            <br>
+                            <blockquote><p>This is a contrived example that I'm intentionally over-engineering to show you what a more real-world scenario would be like. This does not mean it has to be this complicated every time! Feel free to use useState if that suits your scenario. In addition, some providers are going to be short and simple like this, and others are going to be MUCH more involved with many hooks.</p></blockquote>
+                            <br>
+                            <h3>The Custom Consumer Hook</h3>
+                            <br>
+                            <p>Most of the APIs for context usages I've seen in the wild look something like this:</p>
+                            <br>
+                            <div class="blog_img">
+                                <img src="assets/images/blog-1-5.png" alt="blog_img1">
+                            </div>
+                            <br>
+                            <p>But I think that's a missed opportunity at providing a better user experience. Instead, I think it should be like this:</p>
+                            <br>
+                            <div class="blog_img">
+                                <img src="assets/images/blog-1-6.png" alt="blog_img1">
+                            </div>
+                            <br>
+                            <p>This has the benefit of you being able to do a few things which I'll show you in the implementation now:</p>
+                            <br>
+                            <div class="blog_img">
+                                <img src="assets/images/blog-1-7.png" alt="blog_img1">
+                            </div>
+                            <br>
+                            <p>First, the useCount custom hook uses React.useContext to get the provided context value from the nearest CountProvider. However, if there is no value, then we throw a helpful error message indicating that the hook is not being called within a function component that is rendered within a CountProvider. This is most certainly a mistake, so providing the error message is valuable. #FailFast</p>
+                            <br>
+                            <h3>The Custom Consumer Component</h3>
+                            <br>
+                            <p>If you're able to use hooks at all, then skip this section. However if you need to support React < 16.8.0, or you think the Context needs to be consumed by class components, then here's how you could do something similar with the render-prop based API for context consumers:</p>
+                            <br>
+                            <div class="blog_img">
+                                <img src="assets/images/blog-1-8.png" alt="blog_img1">
+                            </div>
+                            <br>
+                            <p>And here's how class components would use it:</p>
+                            <br>
+                            <div class="blog_img">
+                                <img src="assets/images/blog-1-9.png" alt="blog_img1">
+                            </div>
+                            <br>
+                            <p>This is what I used to do before we had hooks and it worked ok. I would not recommend bothering with this if you can use hooks though. Hooks are much better.</p>
+                            <br>
+                            <h3>TypeScript</h3>
+                            <br>
+                            <p>I promised I'd show you how to avoid issues with skipping the defaultValue when using TypeScript. Guess what! By doing what I'm suggesting, you avoid the problem by default! It's actually not a problem at all. Check it out:</p>
+                            <br>
+                            <div class="blog_img">
+                                <img src="assets/images/blog-1-10.png" alt="blog_img1">
+                            </div>
+                            <br>
+                            <p>With that, anyone can use useCount without having to do any undefined-checks, because we're doing it for them!</p>
+                            <br>
+                            <h3>What about dispatch type typos?</h3>
+                            <br>
+                            <p>At this point, you reduxers are yelling: "Hey, where are the action creators?!" If you want to implement action creators that is fine by me, but I never liked action creators. I have always felt like they were an unnecessary abstraction. Also, if you are using TypeScript and have your actions well typed, then you should not need them. You can get autocomplete and inline type errors!</p>
+                            <br>
+                            <div class="blog_img">
+                                <img src="assets/images/blog-1-11.png" alt="blog_img1">
+                            </div>
+                            <br>
+                            <p>I really like passing dispatch this way and as a side benefit, dispatch is stable for the lifetime of the component that created it, so you don't need to worry about passing it to useEffect dependencies lists (it makes no difference whether it is included or not).</p>
+                            <p>If you are not typing your JavaScript (you probably should consider it if you have not), then the error we throw for missed action types is a failsafe. Also, read on to the next section because this can help you too.</p>
+                            <br>
+                            <h3>What about async actions?</h3>
+                            <br>
+                            <p>This is a great question. What happens if you have a situation where you need to make some asynchronous request and you need to dispatch multiple things over the course of that request? Sure you could do it at the calling component, but manually wiring all of that together for every component that needs to do something like that would be pretty annoying.</p>
+                            <p>What I suggest is you make a helper function within your context module which accepts dispatch along with any other data you need, and make that helper be responsible for dealing with all of that. Here's an example from my Advanced React Patterns workshop:</p>
+                            <br>
+                            <div class="blog_img">
+                                <img src="assets/images/blog-1-12.png" alt="blog_img1">
+                            </div>
+                            <br>
+                            <p>Then you can use that like this:</p>
+                            <br>
+                            <div class="blog_img">
+                                <img src="assets/images/blog-1-13.png" alt="blog_img1">
+                            </div>
+                            <br>
+                            <p>I'm really happy with this pattern and if you'd like me to teach this at your company let me know (or add yourself to the waitlist for the next time I host the workshop)!</p>
+                            <br>
+                            <h3>Conclusion</h3>
+                            <br>
+                            <p>Note that I'm NOT exporting CountContext. This is intentional. I expose only one way to provide the context value and only one way to consume it. This allows me to ensure that people are using the context value the way it should be and it allows me to provide useful utilities for my consumers.</p>
+                            <p>I hope this is useful to you! Remember:</p>
+                            <ul>
+                                <li>
+                                    You shouldn't be reaching for context to solve every state sharing problem that crosses your desk.
+                                </li>
+                                <li>
+                                    Context does NOT have to be global to the whole app, but can be applied to one part of your tree
+                                </li>
+                                <li>
+                                    You can (and probably should) have multiple logically separated contexts in your app.
+                                </li>
+                            </ul>
+                            <br>
+                            <p>Good luck!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mt-lg-0 mt-4">
+            	<div class="sidebar sidebar_light">
+                	<div class="widget">
+                    	<h5 class="widget_title">Recent Posts</h5>
+                        <ul class="recent_post border_bottom_dash list_none">
+                            <li>
+                                <div class="post_footer">
+                                    <div class="post_img">
+                                        <a href="blog-detail-dark2.html"><img src="assets/images/photo-1543393716-375f47996a77 copia.png" alt="letest_post1"></a>
+                                    </div>
+                                    <div class="post_content">
+                                        <h6><a href="blog-detail-dark2.html">How Remix makes CSS clashes predictable</a></h6>
+                                        <p class="small m-0">September 13th, 2021</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="post_footer">
+                                    <div class="post_img">
+                                        <a href="blog-detail-dark3.html"><img src="assets/images/Copia de photo-1617804309291-2f2d3734b471 copia.png" alt="letest_post2"></a>
+                                    </div>
+                                    <div class="post_content">
+                                        <h6><a href="blog-detail-dark3.html">Super Simple Start to ESModules in Node.js</a></h6>
+                                        <p class="small m-0">August 22, 2021</p>
+                                    </div>
+                                </div>
+                            </li>
+                    	</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<!-- END SECTION BLOG -->
+
+
+<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a> 
+
+<!-- Latest jQuery --> 
+<script src="assets/js/jquery-1.12.4.min.js"></script> 
+<!-- jquery-ui --> 
+<script src="assets/js/jquery-ui.js"></script>
+<!-- popper min js --> 
+<script src="assets/js/popper.min.js"></script>
+<!-- Latest compiled and minified Bootstrap --> 
+<script src="assets/bootstrap/js/bootstrap.min.js"></script> 
+<!-- owl-carousel min js  --> 
+<script src="assets/owlcarousel/js/owl.carousel.min.js"></script> 
+<!-- magnific-popup min js  --> 
+<script src="assets/js/magnific-popup.min.js"></script> 
+<!-- waypoints min js  --> 
+<script src="assets/js/waypoints.min.js"></script> 
+<!-- parallax js  --> 
+<script src="assets/js/parallax.js"></script> 
+<!-- countdown js  --> 
+<script src="assets/js/jquery.countdown.min.js"></script> 
+<!-- jquery.counterup.min js --> 
+<script src="assets/js/jquery.counterup.min.js"></script>
+<!-- imagesloaded js -->
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<!-- isotope min js --> 
+<script src="assets/js/isotope.min.js"></script>
+<!-- vanilla-tilt.babel.min js -->
+<script src='assets/js/vanilla-tilt.babel.min.js'></script> 
+<!-- typed.min js --> 
+<script src="assets/js/typed.min.js"></script>
+<!-- typed text js --> 
+<script src="assets/js/typed-text.js"></script>
+<!-- mCustomScrollbar.concat.min js -->
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- scripts js --> 
+<script src="assets/js/scripts.js"></script>
+
+</body>
+
+<!-- Mirrored from bestwebcreator.com/martyn/demo/blog-detail-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Nov 2021 14:22:03 GMT -->
+</html>
